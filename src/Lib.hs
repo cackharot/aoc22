@@ -58,5 +58,13 @@ game = do
     scoreSingle [a, b] = win a b
     win a b = case (a,b) of
       (Rock _, Paper y) -> 6 + y
+      (Scissor _, Rock y) -> 6 + y
+      (Paper _, Scissor y) -> 6 + y
+
       (Paper _, Rock y) -> 0 + y
+      (Rock _, Scissor y) -> 0 + y
+      (Scissor _, Paper y) -> 0 + y
+
       (Scissor _, Scissor y) -> 3 + y
+      (Rock _, Rock y) -> 3 + y
+      (Paper _, Paper y) -> 3 + y
