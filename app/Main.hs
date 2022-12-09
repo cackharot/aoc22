@@ -3,4 +3,6 @@ module Main (main) where
 import Lib
 
 main :: IO ()
-main = totalCalories
+main = do
+  totalCalories
+  game
